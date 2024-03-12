@@ -43,7 +43,7 @@
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish",
-    "start": "esno src/create-gateway.ts",
+    "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
     "prepare": "simple-git-hooks",
@@ -70,7 +70,7 @@
     "pre-commit": "pnpm lint-staged && pnpm typecheck"
   },
   "lint-staged": {
-    "*": "eslint --fix"
+    "*": "eslint . --fix"
   },
   "dependencies": {
     "eslint-kit": "^10.19.0"
