@@ -7,7 +7,14 @@ export default defineBuildConfig({
   clean: true,
   rollup: {
     emitCJS: true,
-    inlineDependencies: true
+    inlineDependencies: true,
+    esbuild: {
+      tsconfigRaw: {
+        compilerOptions: {
+          experimentalDecorators: true
+        }
+      }
+    }
   },
   alias: {
     '@': resolve(__dirname, 'src')
