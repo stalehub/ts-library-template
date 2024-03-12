@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "lib": ["ESNext"],
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "allowJs": false,
     "allowSyntheticDefaultImports": true,
@@ -21,7 +21,7 @@
     "noFallthroughCasesInSwitch": true,
     "suppressExcessPropertyErrors": false,
     "suppressImplicitAnyIndexErrors": false,
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "allowUnreachableCode": false,
     "verbatimModuleSyntax": true,
     "importHelpers": false,
@@ -30,7 +30,9 @@
     "pretty": true,
     "baseUrl": ".",
     "paths": {
-      "@lib": ["src/index.ts"]
+      "@lib": ["src/index.ts"],
+      "@/*": ["src/*"]
     }
-  }
+  },
+  "include": ["src"]
 }
